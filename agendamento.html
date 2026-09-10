@@ -17,10 +17,47 @@
         </nav>
     </header>
 
-        <main>
+    <main>
         <h2>Agende sua consulta</h2>
         <form action="#" method="post">
-           
+            <label for="nome">Nome e Sobrenome (responsavel pela reserva): </label>
+            <input type="text" name="nome" id="nome"> <br>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"> <br>
+
+            <label for="telefone">Telefone: </label>
+            <input 
+                type="tel" 
+                name="telefone" 
+                id="telefone" 
+                maxlength="15"
+                pattern="(?:\(?[1-9]{2}\)?\s?)?(?:9\d{4}|\d{4})-?\d{4}"
+                title="Digite com DD. Ex: (17) 98765-4321 ou 17987654321"> <br>
+
+            <label for="data">Data: </label>
+            <input type="date" name="data" id="data"> <br>
+
+            <label for="hora">Horário (das): </label>
+            <input type="time" name="hora" id="hora"> <br>
+
+            <label for="hora">Até: </label>
+            <input type="time" name="hora" id="hora"> <br>
+
+            <label for="especialidades">Especialidade:</label>
+            <select name="especialidades" id="especialidades">
+                <option value="">Selecione uma opção</option>
+                <option value="futsal">Futsal</option>
+                <option value="volei">Vôlei</option>
+                <option value="futevôlei">Fute Vôlei</option>
+                <option value="basquete">Basquete</option>
+                <option value="tenisdemesa">Tenis de mesa</option>
+            </select>
+            <br>
+            <label for="participantes">Número de participantes: </label>
+            <input type="text" name="participantes" id="participantes" title="Máximo de participantes por reserva: 25">
+            <br>
+            <button type="submit">Confirmar Agendamento</button>
         </form>
     </main>
 </body>
